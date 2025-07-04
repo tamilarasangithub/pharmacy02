@@ -1,14 +1,5 @@
-{
-  "name": "untitled_2",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "start": "parcel ./*.html ",
-    "build": "parcel build ./*.html  --dist-dir ./build"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "parcel": "^2.7.0"
-  }
-}
+window.addEventListener("scroll", () => { let fromTop = window.scrollY;
+
+links.forEach(link => { const section = document.querySelector(link.getAttribute("href")); if ( section.offsetTop <= fromTop + 60 && section.offsetTop + section.offsetHeight > fromTop + 60 ) { links.forEach(l => l.classList.remove("active")); link.classList.add("active"); } }); });
+
+document.getElementById("appointment-form").addEventListener("submit", function(e) { e.preventDefault(); alert("Thank you! Your appointment has been booked."); this.reset(); });
